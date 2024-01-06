@@ -1,0 +1,176 @@
+<html>
+    <head>
+        <title>About</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: white;
+                margin: 10px;
+                background-color: none;
+            }
+
+            #container {
+            position: relative;
+        }
+
+        #background-img {
+            width: 100%;
+            height: 300px;
+        }
+
+        #fade-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Adjust the gradient as needed */
+            pointer-events: none; /* Allows interaction with elements beneath the overlay */
+        }
+
+        #text1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(0, 0, 0, 0.607);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            z-index: 1; /* Ensure text is above the overlay */
+        }
+        #text2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            z-index: 1; /* Ensure text is above the overlay */
+        }
+        #text3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            z-index: 1; /* Ensure text is above the overlay */
+        }
+        #text0 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            z-index: 1; /* Ensure text is above the overlay */
+        }
+        nav {
+            background-color: rgb(122, 173, 240);
+            margin-left: 20%;
+            margin-right: 20%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+        #footer{
+            text-align: center;
+            background-color: rgb(122, 173, 240);
+        }
+        </style>
+    </head>
+    <body background="./assets/img1.webp">
+        <h1>About Me!!</h1><br>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="extra.html">Creativity</a>
+        </nav><br>
+        <div id="container">
+            <img id="background-img" src="./assets/img2.jpg" alt="Background Image">
+            <div id="fade-overlay"></div>
+            <div id="text0">
+                <p><ul>
+                    <li>NNAME: Nikhita K Nagarva</li>
+                    <li>PHONE: +91 9448742696</li>
+                    <li>E-MAIL: nikhitak.btech23@rvu.edu.in</li>
+                   </ul>
+                </p>
+            </div>
+        </div>
+       <br><hr><br>
+       
+    </div>
+        <div id="container">
+            <img id="background-img" src="./assets/img3.webp" alt="Background Image">
+            <div id="fade-overlay"></div>
+            <div id="text1">
+                <p><ul>
+                    <li><a href="https://srividyamandir.in/">SCHOOL</a> Sri Vidya Mandir Education Society</li>
+                    <li><a href="https://vmipuc.org/">PUC</a> Vidya Mandir Ind. PU College</li>
+                    <li><a href="https://rvu.edu.in/">UNIVERSITY</a> RV University</li>
+                   </ul>
+                </p>
+            </div>
+        </div><br><hr><br>
+        <div id="container">
+            <img id="background-img" src="./assets/img4.jpg" alt="Background Image">
+            <div id="fade-overlay"></div>
+            <div id="text2">
+                <p>My passion for computer science is reflected in my proficiency with languages like Python and 
+                    JavaScript, crafting elegant code solutions. Specializing in web 
+                    development, I actively engage in AI projects, prioritize cybersecurity, contribute to 
+                    open-source initiatives, and maintain a continuous learning mindset to stay at technology's 
+                    forefront.
+                </p>
+            </div>
+        </div><br><hr><br>
+        <div id="container">
+            <img id="background-img" src="./assets/img5.jpg" alt="Background Image">
+            <div id="fade-overlay"></div>
+            <div id="text2">
+                <p>Engaging in Scouts and Guides has been a transformative aspect of my personal and leadership 
+                    development. As an active member, I participated in various activities that honed my teamwork, 
+                    communication, and problem-solving skills. Notable experiences include organizing and leading 
+                    outdoor expeditions, fostering a sense of community through teamwork exercises, and acquiring 
+                    essential survival skills.I am proud to say that I am state level Guide. I have learnt basic 
+                    first-aid, poineering and many more skills. To Know more <a href="https://www.isgf.org/index.php/en/">click here</a>
+                </p>
+            </div>
+        </div><br><hr><br>
+        <div id="container">
+            <img id="background-img" src="./assets/img6.webp" alt="Background Image">
+            <div id="fade-overlay"></div>
+            <div id="text3">
+                <p>Coading skills</p>
+                <p><ul>
+                    <li>HTML-Medium</li>
+                    <li>CSS, JavaScript-Basics</li>
+                    <li>C-Medium</li>
+                    <li>C++-Medium</li>
+                    <li>Python-Basics</li>
+                    <li>SQL-Basics</li>
+                </ul>To know more <a href="https://www.w3.org/">click here</a></p>
+            </div>
+        </div>
+        <footer id="footer">
+            <p>&copy;2024. Copyrights reserved</p>
+            <p>Nikhita K Nagavar</p>
+            <p>E-MAIL- nikhitak.btech23@rvu.edu.in</p>
+        </footer>
+    </body>
+</html>

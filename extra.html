@@ -1,0 +1,182 @@
+<html>
+    <head>
+        <title>Creativity</title>
+        <style>
+            h1{
+                text-align: center;
+                color: white;
+                background-color: none;
+                margin: 10px;
+                padding: 10px;
+            }
+            nav {
+            background-color: lightblue;
+            padding: 10px;
+            margin-left: 20%;
+            margin-right: 20%;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+        #footer{
+            text-align: center;
+            background-color: lightblue;
+        }
+        tr {
+            background-color: none;
+            color: white;
+        }
+        
+        .slider-container {
+      width: 500px;
+      height: 400px;
+      margin: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+      overflow: hidden; 
+    }
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Ensure the entire image is visible without distortion */
+    }
+
+    .slider-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 20px;
+      background: none;
+      border: none;
+      outline: none;
+      color: #333;
+    }
+
+    #prevBtn {
+      left: 10px;
+    }
+
+    #nextBtn {
+      right: 10px;
+    }
+    table {
+      border: none;
+    }
+        </style>
+    </head>
+    <body background="./assets/img1.webp">
+        <h1>Come check out my creative side!!!</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </nav><br>
+        <div class="drawing">
+            <table>
+                <tr>
+                    <th><img src="./assets/img7.jpg" height="400" width="500"></th>
+                    <td><p>DRAWING:</p><p>Expressing my creativity through drawing and painting has been a lifelong passion that
+                        brings me immense joy and fulfillment. Exploring a variety of mediums, from graphite and 
+                        watercolors to digital art, I find inspiration in capturing the beauty of the world around me 
+                        and translating emotions onto canvas. This artistic journey allows me to continually develop my 
+                        skills, experiment with different styles, and embrace the therapeutic nature of the creative
+                        process. Whether it's depicting vivid landscapes, illustrating imaginative concepts, or 
+                        conveying emotions through portraiture, my interest in drawing and painting serves as a dynamic
+                        outlet for self-expression and a source of constant inspiration in my life.</p>
+                      </td>
+                </tr>
+                <tr>
+                    <th><img src="./assets/img8.jpeg" height="400" width="500"></th>
+                    <td><p>ASATRONOMY:</p><p>Fascination with space has been a lifelong inspiration for me. Exploring the mysteries 
+                        beyond our planet, from the vastness of galaxies to the intricacies of celestial bodies, 
+                        fuels my curiosity. I delve into topics like astronomy, astrophysics, and space exploration,
+                         constantly seeking to expand my understanding of the cosmos. Whether stargazing, following 
+                         space missions, or engaging in discussions on the potential for future space exploration, 
+                         my interest in space serves as a constant reminder of the limitless possibilities that 
+                         exist beyond our terrestrial boundaries. It inspires me to stay informed about the latest 
+                         advancements in space science and technology, fostering a sense of wonder and appreciation 
+                         for the grandeur of the universe. To know more <a href="https://www.space.com/">click here</a>
+                        </p></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="slider-container">
+                            <div class="slider">
+                              <div class="slide"><img src="./assets/img9.jpeg" alt="Slide 1"></div>
+                              <div class="slide"><img src="./assets/img10.jpeg" alt="Slide 2"></div>
+                              <div class="slide"><img src="./assets/img11.jpeg" alt="Slide 3"></div>
+                              <div class="slide"><img src="./assets/img12.jpeg" alt="Slide 3"></div>
+                              <div class="slide"><img src="./assets/img13.jpeg" alt="Slide 3"></div>
+                              <!-- Add more slides as needed -->
+                            </div>
+                            <button class="slider-button" id="prevBtn" onclick="prevSlide()">❮</button>
+                            <button class="slider-button" id="nextBtn" onclick="nextSlide()">❯</button>
+                          </div>
+                    </td>
+                    <td><p>COMMUNITY SERVICE:</p><p>Engaging in community service at Kengari Public school has been a deeply rewarding experience, 
+                        allowing me to contribute positively to the local education environment. Through teaching 
+                        about health and highgine, I've had the privilege of supporting students, educators, and 
+                        the school community. Whether participating in tutoring students, or organizing, my involvement in community 
+                        service at the school reflects my commitment to fostering a supportive and enriching 
+                        learning environment. This experience has not only strengthened my sense of social 
+                        responsibility but has also provided valuable insights into the importance of education 
+                        and community collaboration.</p></td>
+                </tr>
+            </table>
+        </div>
+        <footer id="footer">
+            <p>&copy;2024. Copyrights reserved</p>
+            <p>Nikhita K Nagavar</p>
+            <p>E-MAIL- nikhitak.btech23@rvu.edu.in</p>
+        </footer>
+        <script>
+            var currentSlide = 0;
+            var totalSlides = document.querySelectorAll('.slide').length;
+        
+            function showSlide(index) {
+              var slider = document.querySelector('.slider');
+              var slideWidth = document.querySelector('.slide').offsetWidth;
+              var newPosition = -index * slideWidth;
+              slider.style.transform = 'translateX(' + newPosition + 'px)';
+              currentSlide = index;
+            }
+        
+            function nextSlide() {
+              currentSlide = (currentSlide + 1) % totalSlides;
+              showSlide(currentSlide);
+            }
+        
+            function prevSlide() {
+              currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+              showSlide(currentSlide);
+            }
+        
+            // Show the first slide initially
+            showSlide(currentSlide);
+          </script>
+    </body>
+</html>
